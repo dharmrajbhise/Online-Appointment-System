@@ -76,13 +76,8 @@ public class UserController {
 	    
 	    
 	    if(isAppointmentAvailable) {
-	    	
-	    	model.addAttribute("message","Appointment Not available that time. Please change the time.");
-	    	return "user";
-	    	
-	    } else {
-	    	
-	    	us.saveAppoinment(appoint);
+
+		    us.saveAppoinment(appoint);
 		    String ACCOUNT_SID = "ACe2ffc0e7ad24cb03314f3322bae7c0c5";
 		    String AUTH_TOKEN = "568c7f5f428d292e42018e62615df81e";
 		    String FROM_PHONE_NUMBER = "+12282313744";
@@ -95,8 +90,13 @@ public class UserController {
 		    		"Hello, your appointment has been scheduled successfully!").create();
 		    
 		    System.out.println("SMS sent successfully " + twilioMessage.getSid());
-		    
-		    model.addAttribute("message", "Appoinment Sheduled Successfully! check your mobile for confirmation");
+	    	
+	    	model.addAttribute("message","Appoinment Sheduled Successfully! check your mobile for confirmation");
+	    	return "user";
+	    	
+	    } else {
+	    	
+		    model.addAttribute("message", "Appointment Not available that time. Please change the time.");
 		    
 		    return "user";
 
