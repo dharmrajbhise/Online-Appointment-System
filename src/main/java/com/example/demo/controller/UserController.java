@@ -70,12 +70,6 @@ public class UserController {
 //	    	times.add(d1);
 //	    }
 	    
-	    
-	    boolean isAppointmentAvailable = u1.stream()
-	            .anyMatch(a -> a.getDate().equals(date) && a.getTime().equals(time));
-	    
-	    
-	    if(isAppointmentAvailable) {
 
 		    us.saveAppoinment(appoint);
 		    String ACCOUNT_SID = "ACe2ffc0e7ad24cb03314f3322bae7c0c5";
@@ -94,13 +88,6 @@ public class UserController {
 	    	model.addAttribute("message","Appoinment Sheduled Successfully! check your mobile for confirmation");
 	    	return "user";
 	    	
-	    } else {
-	    	
-		    model.addAttribute("message", "Appointment Not available that time. Please change the time.");
-		    
-		    return "user";
-
-	    }
 	
 	}
 	
