@@ -84,7 +84,7 @@ public class UserController {
 	    	
 	    	us.saveAppoinment(appoint);
 		    String ACCOUNT_SID = "ACe2ffc0e7ad24cb03314f3322bae7c0c5";
-		    String AUTH_TOKEN = "2d61c31525d30247d0b282923edaa242";
+		    String AUTH_TOKEN = "568c7f5f428d292e42018e62615df81e";
 		    String FROM_PHONE_NUMBER = "+12282313744";
 		    
 		    com.twilio.Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
