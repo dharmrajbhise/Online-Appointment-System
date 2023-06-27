@@ -12,10 +12,10 @@
     <style>
         /* Add your custom styles here */
         body {
-            background-image: url("${pageContext.request.contextPath}/images/docback.jpg");
+            background:#6B3FA0;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 100vh;
+            /* height: 100vh; */
         }
 
         .navbar {
@@ -37,16 +37,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            /* height: 100vh; */
             color: #fff;
         } 
 
         .content {
             text-align: center;
+            margin-top: 50px;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             color: #fff;
         }
 
@@ -82,6 +83,9 @@
   .fadeIn {
     animation: fadeIn 5s;
   }
+  footer{
+  margin-top: 150px;
+  }
     
     
     </style>
@@ -115,7 +119,7 @@
 
     <div class="container">
     <div class="row">
-    <div class="col-md-8 offset-md-5">
+    <div class="col-md-6 offset-md-3">
         <div class="content fadeIn">
             <h1>Welcome to the Online Appointment System</h1>
             <p>Please click the button below to schedule an appointment.</p>
@@ -191,7 +195,7 @@
 
   <!-- Copyright -->
   <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
+    Â© 2020 Copyright:
     <a class="text-dark" href="https://OAS.com/">OAS</a>
   </div>
   <!-- Copyright -->
@@ -202,18 +206,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>    
-
-    
-
-    <script>
-function showAlert() {
-    var alertMessage = "${message}";
-    if (alertMessage) {
-        alert(alertMessage);
-    }
-}
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
