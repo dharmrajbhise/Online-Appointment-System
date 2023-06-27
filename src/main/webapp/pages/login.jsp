@@ -6,12 +6,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-image: url("${pageContext.request.contextPath}/images/docback.jpg");
+            background:#6B3FA0;
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -32,7 +33,7 @@
             color: #fff;
         }
 
-        .login-page {
+         .login-page {
 			  margin-top: 100px;
 			  text-align: center;
 			  color: #fff;
@@ -126,18 +127,18 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-lg-6 offset-lg-6">
+      <div class="col-lg-6 col-md-8">
         <div class="login-page animated fadeIn">
           <h1>Login</h1>
           	<c:if test="${not empty errorMessage}">
         		<div class="alert alert-danger" role="alert">${errorMessage}</div>
     		</c:if>
           <form action="/login" method="post">
-            <div class="mb-3">
+            <div class="form-group">
               <label for="username" class="form-label">Username</label>
               <input type="text" class="form-control" name="username" id="email" aria-describedby="emailHelp" required>
             </div>
-            <div class="mb-3">
+            <div class="form-group">
               <label for="password" class="form-label">Password</label>
               <input type="password" class="form-control" name="password" id="password" required>
             </div>
@@ -214,7 +215,7 @@
 
   <!-- Copyright -->
   <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
+    Â© 2020 Copyright:
     <a class="text-dark" href="https://OAS.com/">OAS</a>
   </div>
   <!-- Copyright -->
